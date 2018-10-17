@@ -35,7 +35,20 @@ class userController {
       die();
       }
     }
-    print "<script> alert('usuario não encontrado.'); window.history.go(-1); </SCRIPT>\n";
+    print "<script> alert('usuário não encontrado.'); window.history.go(-1); </SCRIPT>\n";
   }
+
+  public function insereUser($request){
+    $nome = $request['Name'];
+    $email = $request['Email'];
+    $datanasc = $request['datanasc'];
+    $cpf = $request['cpf'];
+    $tel = $request['tel'];
+    $senha = $request['senha'];
+
+    $user = new user;
+    $user->insereUser($nome,$cpf,$tel,$Email,$datanasc,1,$senha);
+
+    include './view/user/areaUser.php';
 
 }

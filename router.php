@@ -34,3 +34,8 @@ if ($op == 4){
   $reservaController = new reservaController;
   $reservaController->insereReserva($_POST);
 }
+
+if ($op == 5) {
+  $userController = new userController;
+  $userController->insereUser($_POST);
+}

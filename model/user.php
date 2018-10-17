@@ -28,5 +28,9 @@ class user {
 
   }
 
-  public function registrarUser($)
+  public function registrarUser($nome,$cpf,$telefone,$email,$dataNasc,$tipo,$senha){
+    $sql = "INSERT INTO usuario(nome,cpf,telefone,email,datanasc,tipo,senha)
+    values ('$nome','$cpf','$telefone','$dataNasc','$tipo','$senha')";
+    $this->db>query($sql);
+  }
 }
