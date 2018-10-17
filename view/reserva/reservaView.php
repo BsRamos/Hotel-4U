@@ -11,10 +11,12 @@
 <link rel="stylesheet" type="text/css" href="../../public/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="../../public/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 <link rel="stylesheet" type="text/css" href="../../public/plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="../../public/styles/elements_styles.css">
-<link rel="stylesheet" type="text/css" href="../../public/styles/elements_responsive.css">
+<link rel="stylesheet" type="text/css" href="../../public/styles/contact_styles.css">
+<link rel="stylesheet" type="text/css" href="../../public/styles/contact_responsive.css">
 <link rel="stylesheet" type="text/css" href="../../public/styles/about_styles.css">
 <link rel="stylesheet" type="text/css" href="../../public/styles/about_responsive.css">
+<link rel="stylesheet" type="text/css" href="../../public/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="../../public/styles/responsive.css">
 
 </head>
 
@@ -104,68 +106,87 @@
 <br>
 
 
-<section class="align-items-center">
-	<div class="container text-center">
+<div class="contact_form_section">
+	<div class="container">
+		<div class="row">
+			<div class="col">
 
-<form method="post" action="../../router.php?op=3">
+				<!-- Contact Form -->
+				<div class="contact_form_container">
+					<div class="contact_title text-center"></div>
+					<br>
+					<br>
+					<form method="post"  action="../../router.php?op=4" class="contact_form text-center">
+									<br>
+									<br>
+									<div class="search_item">
+										<select name="id_hotel" class="dropdown_item_select search_input">
+											<option value="">Selecione o Hotel:</option>
+											<?php foreach( $lista as $e ): ?>
+											<option value="<?= $e['id'] ?>"><?= $e['local'] ?></option>
+											<?php endforeach ?>
+										</select>
+									</div>
+									<br>
+									<br>
+									<div class="search_item">
+										<select name="tipoQuarto" class="dropdown_item_select search_input">
+											<option value="">Selecione a sua Acomodação:</option>
+											<option value="1">Standart</option>
+											<option value="2">Luxo</option>
+											<option value="3">Ultra Luxo</option>
+										</select>
+									</div>
+									<br>
+									<br>
+									<div class="search_item">
+										<select name="tipoQuarto" class="dropdown_item_select search_input">
+											<option value="">Selecione o numero de crianças:</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<br>
+									<br>
+									<div class="search_item">
+										<select name="tipoQuarto" class="dropdown_item_select search_input">
+											<option value="">Selecione o número de adultos:</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+										</select>
+									</div>
+									<br>
+									<br>
+							<div class="form-group">
+								<input type="text" name="dataE" placeholder="Data de Entrada : YYYY-MM-DD" class="text_field contact_form_message">
+						</div>
 
+						<div class="form-group">
+							<input type="text" name="dataS" placeholder="Data de Saida : YYYY-MM-DD" class="text_field contact_form_message">
+						</div>
 
-	<div class="form-group">
-				<select name="id_hotel">
-					<option value="">Selecione o Hotel:</option>
-					<?php foreach( $lista as $e ): ?>
-					<option value="<?= $e['id'] ?>"><?= $e['local'] ?></option>
-					<?php endforeach ?>
-				</select>
+						<div class="form-group">
+							<textarea class="text_field contact_form_message" name="extra" rows="4" placeholder="Se tiver alguma socilitação, fale para nós:"></textarea>
+						</div>
+
+						<button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Reservar<span></span><span></span><span></span></button>
+
+					</form>
+					</div>
+			</div>
+		</div>
 	</div>
-
-	<div class="form-group">
-				<select name="tipoQuarto">
-					<option value="">Selecione a sua Acomodação:</option>
-					<option value="1">Standart</option>
-					<option value="2">Luxo</option>
-					<option value="3">Ultra Luxo</option>
-				</select>
-	</div>
-
-	<div class="form-group">
-				<select name="tipoQuarto">
-					<option value="">Selecione o numero de crianças:</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-				</select>
-	</div>
-
-	<div class="form-group">
-				<select name="tipoQuarto">
-					<option value="">Selecione o número de adultos:</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-				</select>
-	</div>
-
-	<div class="form-group">
-		<label for="dataE">Data de Entrada: </label>
-		<input type="text" name="dataE" placeholder="YYYY-MM-DD">
 </div>
 
-<div class="form-group">
-	<label for="dataS">Data de Saida: </label>
-	<input type="text" name="dataS" placeholder="YYYY-MM-DD">
-</div>
 
-<div class="form-group">
-	<label for="extra">Se tiver alguma socilitação, fale para nós: </label>
-	<input type="text" name="extra" placeholder="">
-</div>
 
-<input class="button button_color_1 trans_2" type="submit" value="      Registrar      ">
-</form>
-</div>
-</section>
+
+
+
+
 
 	<!-- Footer -->
 

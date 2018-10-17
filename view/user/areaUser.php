@@ -108,7 +108,7 @@
 				<div class="row">
 
 					<div class="col-sm-3 text-center">
-						<div class="button button_color_1 trans_200"><a href="#">Fazer reserva<span></span><span></span><span></span></a></div>
+						<div class="button button_color_1 trans_200"><a href="../../router.php?op=3">Fazer reserva<span></span><span></span><span></span></a></div>
 					</div>
 
 					<div class="col-sm-4 text-center">

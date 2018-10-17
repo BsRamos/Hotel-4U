@@ -3,11 +3,14 @@
 // Includes - framework
 include './model/Database.php';
 include './model/user.php';
+include './model/hoteis.php';
+include './model/reserva.php';
 include './controller/userController.php';
+include './controller/reservaController.php';
 
 // Tratamento das rotas
 use Controller\userController;
-
+use Controller\reservaController;
 
 $op = $_GET['op'];
 
@@ -21,4 +24,8 @@ if ( $op == 1 ) {
 if ( $op == 2 ) {
   $userController = new userController;
   $userController->acesso($_POST);
+}
+if ($op == 3) {
+  $reservaController= new reservaController;
+  $reservaController->listarTodos();
 }

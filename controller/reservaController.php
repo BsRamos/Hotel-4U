@@ -2,15 +2,19 @@
 
 namespace Controller;
 
-use Model\hotel;
+use Model\hoteis;
 
 class reservaController {
 
     public function listarTodos(){
-    $hotel = new hotel;
+    $hotel = new hoteis;
     $lista = $hotel->all();
 
     include './view/reserva/reservaView.php';
+  }
+
+  public function insereReserva(){
+
   }
 
 }
