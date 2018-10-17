@@ -27,6 +27,9 @@ class reservaController {
 
     $reserva = new reserva;
     $reserva->insereReserva($quarto,$numC,$numA,$dataE,$dataS,$extras,$hotel,$usuario);
+
+    include './view/user/areaUser.php';
+
   }
 
 }
