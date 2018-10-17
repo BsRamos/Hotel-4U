@@ -20,7 +20,7 @@ class reservaController {
     $numA = $request['numA'];
     $hotel = $request['id_hotel'];
     session_start();
-    $usuario =$SESSION['id'];
+    $usuario =$_SESSION['id'];
     $extras = $request['extra'];
     $dataE = $request['dataE'];
     $dataS = $request['dataS'];
