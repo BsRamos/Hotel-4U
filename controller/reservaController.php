@@ -24,7 +24,7 @@ class reservaController {
     $extras = $request['extra'];
     $dataE = $request['dataE'];
     $dataS = $request['dataS'];
-
+    echo "<script>alert('Reserva feita com sucesso')</script>";
     $reserva = new reserva;
     $reserva->insereReserva($quarto,$numC,$numA,$dataE,$dataS,$extras,$hotel,$usuario);
 
