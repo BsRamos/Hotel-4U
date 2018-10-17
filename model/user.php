@@ -27,4 +27,6 @@ class user {
     return $this->db->query($sql);
 
   }
+
+  public function registrarUser($)
 }
