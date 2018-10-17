@@ -130,15 +130,12 @@
 					<!-- Contact Form -->
 					<div class="contact_form_container">
 						<div class="contact_title text-center">Registrar</div>
-<<<<<<< HEAD
-						<form action="" id="contact_form" class="contact_form text-center">
-=======
-						<form action="../../router.php?op=5" id="contact_form" class="contact_form text-center">
->>>>>>> 42484be28cc78ea23895e189ef136c21e76cf67d
+
+						<form method="post" action="../../router.php?op=5" id="contact_form" class="contact_form text-center">
 							<input type="text"  class="contact_form_name input_field" placeholder="Nome" required="required" data-error="Name is required." name="nome">
 							<input type="text"  class="contact_form_name input_field" placeholder="E-mail" required="required" data-error="Email is required." name="email">
               <input type="text"  class="contact_form_name input_field" placeholder="Data de Nascimento" required="required" data-error="Name is required." name="datanasc">
-              <input type="text"  class="contact_form_name input_field" placeholder="CPF" required="required" data-error="Name is required." name="cpf">
+              <input type="text"  class="contact_form_name input_field" placeholder="CPF" required="required" data-error="Insira o CPf." name="cpf">
               <input type="text"  class="contact_form_name input_field" placeholder="Telefone" required="required" data-error="Name is required." name="tel">
               <input type="text"  class="contact_form_name input_field" placeholder="Senha" required="required" data-error="Name is required." name="senha">
 <br>
