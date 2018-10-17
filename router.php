@@ -29,3 +29,8 @@ if ($op == 3) {
   $reservaController= new reservaController;
   $reservaController->listarTodos();
 }
+
+if ($op == 4){
+  $reservaController = new reservaController;
+  $reservaController->insereReserva($_POST);
+}

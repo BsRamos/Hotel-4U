@@ -140,7 +140,7 @@
 									<br>
 									<br>
 									<div class="search_item">
-										<select name="tipoQuarto" class="dropdown_item_select search_input">
+										<select name="numC" class="dropdown_item_select search_input">
 											<option value="">Selecione o numero de crianças:</option>
 											<option value="1">1</option>
 											<option value="2">2</option>
@@ -150,7 +150,7 @@
 									<br>
 									<br>
 									<div class="search_item">
-										<select name="tipoQuarto" class="dropdown_item_select search_input">
+										<select name="numA" class="dropdown_item_select search_input">
 											<option value="">Selecione o número de adultos:</option>
 											<option value="1">1</option>
 											<option value="2">2</option>

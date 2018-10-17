@@ -3,6 +3,7 @@
 namespace Controller;
 
 use Model\hoteis;
+use Model\reserva;
 
 class reservaController {
 
@@ -13,8 +14,19 @@ class reservaController {
     include './view/reserva/reservaView.php';
   }
 
-  public function insereReserva(){
+  public function insereReserva($request){
+    $quarto = $request['tipoQuarto'];
+    $numC = $request['numC'];
+    $numA = $request['numA'];
+    $hotel = $request['id_hotel'];
+    session_start();
+    $usuario =$SESSION['id'];
+    $extras = $request['extra'];
+    $dataE = $request['dataE'];
+    $dataS = $request['dataS'];
 
+    $reserva = new reserva;
+    $reserva->insereReserva($quarto,$numC,$numA,$dataE,$dataS,$extras,$hotel,$usuario);
   }
 
 }
