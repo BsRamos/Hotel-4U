@@ -113,7 +113,6 @@
 	</div>
 
 	<!-- Home -->
-
 	<div class="home">
 		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="/public/images/contact_background.jpg"></div>
 		<div class="home_content">

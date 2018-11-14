@@ -84,7 +84,7 @@
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inne" >
 
-<br> 
+<br>
               <h1>Login </h1>
 
 
@@ -117,7 +117,7 @@
 					<div class="footer_col">
 						<div class="footer_content footer_about">
 							<div class="logo_container footer_logo">
-								<div class="logo"><a href="#"><img src="public/images/logo.png" alt="">4u</a></div>
+								<div class="logo"><a href="#"><img src="../../public/images/logo.png" alt="">4u</a></div>
 							</div>
 							<p class="footer_about_text">Junte-se a nós</p>
 							<ul class="footer_social_list">
