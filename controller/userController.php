@@ -49,6 +49,7 @@ class userController {
     $user = new user;
     $user->registrarUser($nome,$cpf,$tel,$email,$datanasc,$senha);
 
-    include './view/user/areaUser.php';
+    print "<script> alert('usuário adicionado com sucesso !!') </SCRIPT>\n"; 
+    include './view/user/login.php';
     }
 }
