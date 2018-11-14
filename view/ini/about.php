@@ -42,7 +42,7 @@
 						</div>
 						<div class="user_box ml-auto">
 							<div class="user_box_login user_box_link"><a href="../../view/user/login.php">login</a></div>
-							<div class="user_box_register user_box_link"><a href="#">registrar</a></div>
+							<div class="user_box_register user_box_link"><a href="../../view/user/registrar.php">registrar</a></div>
 						</div>
 					</div>
 				</div>

@@ -39,16 +39,16 @@ class userController {
   }
 
   public function insereUser($request){
-    $nome = $request['Name'];
-    $email = $request['Email'];
+    $nome = $request['nome'];
+    $email = $request['email'];
     $datanasc = $request['datanasc'];
     $cpf = $request['cpf'];
     $tel = $request['tel'];
     $senha = $request['senha'];
 
     $user = new user;
-    $user->insereUser($nome,$cpf,$tel,$Email,$datanasc,1,$senha);
+    $user->registrarUser($nome,$cpf,$tel,$Email,$datanasc,1,$senha);
 
     include './view/user/areaUser.php';
-
+}
 }

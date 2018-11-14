@@ -39,7 +39,7 @@
 						</div>
 						<div class="user_box ml-auto">
 							<div class="user_box_login user_box_link"><a href="../../view/user/login.php">login</a></div>
-							<div class="user_box_register user_box_link"><a href="#">registrar</a></div>
+							<div class="user_box_register user_box_link"><a href="../../view/user/registrar.php">registrar</a></div>
 						</div>
 					</div>
 				</div>
@@ -195,7 +195,7 @@
 							</li>
 							<li class="contact_info_item d-flex flex-row">
 								<div><div class="contact_info_icon"><img src="/public/images/message.svg" alt=""></div></div>
-								<div class="contact_info_text"><a href="mailto:contact4u@gmail.com?Subject=Hello" target="_top">contact4u@gmail.com</a></div>
+								<div class="contact_info_text"><a href="mailto:contato4u@gmail.com?Subject=Hello" target="_top">contato4u@gmail.com</a></div>
 							</li>
 							<li class="contact_info_item d-flex flex-row">
 								<div><div class="contact_info_icon"><img src="/public/images/planet-earth.svg" alt=""></div></div>

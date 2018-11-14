@@ -44,13 +44,12 @@
 						</div>
 						<div class="user_box ml-auto">
 							<div class="user_box_home user_box_link"><a href="..\..\index.php">Home   |   </a></div>
-							<div class="user_box_register user_box_link"><a href="..\..\view\user\registrar.php">Registrar</a></div>
+							<div class="user_box_register user_box_link"><a href="..\..\view\user\login.php">Login</a></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
 
 	</header>
 
@@ -68,7 +67,7 @@
 
 
 	<!-- Home -->
-
+<br>
 	<div class="home">
 
 		<!-- Home Slider -->
@@ -79,22 +78,25 @@
 
 				<!-- Slider Item -->
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(../../public/images/home_slider.jpg)"></div>
-
+          <div class="home_slider_background" style="background-image:url(../../public/images/hotel.jpg)"></div>
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inne" >
-
-<br> 
-              <h1>Login </h1>
-
-
-						<form action="../../router.php?op=2" method="post" id="contact_form" class="contact_form text-center">
-							<input type="text"  class="contact_form_name input_field" placeholder="E-mail" required="required" data-error="Email é necessário" name="email">
-							<input type="password"  class="contact_form_name input_field" placeholder="Senha" required="required" data-error="Senha é necessária" name="senha">
-
 <br>
-  <button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Entrar<span></span><span></span><span></span></button>
-</form>
+
+              <h1>Registrar </h1>
+
+							<form action="../../router.php?op=5" method="post" id="contact_form" class="contact_form text-center">
+															<input type="text"  class="contact_form_name input_field" placeholder="Nome" required="required" data-error="Name is required." name="nome">
+															<input type="text"  class="contact_form_name input_field" placeholder="E-mail" required="required" data-error="Email is required." name="email">
+															<input type="text"  class="contact_form_name input_field" placeholder="Data de Nascimento" required="required" data-error="Name is required." name="datanasc">
+															<input type="text"  class="contact_form_name input_field" placeholder="CPF" required="required" data-error="Name is required." name="cpf">
+															<input type="text"  class="contact_form_name input_field" placeholder="Telefone" required="required" data-error="Name is required." name="tel">
+															<input type="text"  class="contact_form_name input_field" placeholder="Senha" required="required" data-error="Name is required." name="senha">
+													<br>
+															<button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Enviar<span></span><span></span><span></span></button>
+<br>
+<br>
+                            </form>
 
 
 						</div>
