@@ -28,7 +28,7 @@ class Database {
   public function getDB() {
 
     if ($this->db === null) {
-      $db = new PDO('mysql:host=localhost;dbname=hotelcontroller','root','123456');
+      $db = new PDO('mysql:host=localhost;dbname=hotelcontroller','bruno','123456');
     }
 
     return $db;
