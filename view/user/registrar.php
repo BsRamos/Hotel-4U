@@ -72,6 +72,7 @@
 
 		<!-- Home Slider -->
 
+<<<<<<< HEAD:view/user/registrar.php
 	<div class="home_slider_container">
 
 			<div class="owl-carousel home_slider">
@@ -81,6 +82,24 @@
           <div class="home_slider_background" style="background-image:url(../../public/images/hotel.jpg)"></div>
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inne" >
+=======
+	<div class="contact_form_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+
+					<!-- Contact Form -->
+					<div class="contact_form_container">
+						<div class="contact_title text-center">Registrar</div>
+
+						<form method="post" action="../../router.php?op=5" id="contact_form" class="contact_form text-center">
+							<input type="text"  class="contact_form_name input_field" placeholder="Nome" required="required" data-error="Name is required." name="nome">
+							<input type="text"  class="contact_form_name input_field" placeholder="E-mail" required="required" data-error="Email is required." name="email">
+              <input type="text"  class="contact_form_name input_field" placeholder="Data de Nascimento" required="required" data-error="Name is required." name="datanasc">
+              <input type="text"  class="contact_form_name input_field" placeholder="CPF" required="required" data-error="Insira o CPf." name="cpf">
+              <input type="text"  class="contact_form_name input_field" placeholder="Telefone" required="required" data-error="Name is required." name="tel">
+              <input type="text"  class="contact_form_name input_field" placeholder="Senha" required="required" data-error="Name is required." name="senha">
+>>>>>>> 483ad2320de9df857e1d12dbc1bdc94b6662ed6a:view/user/registrar.php
 <br>
 
               <h1>Registrar </h1>
