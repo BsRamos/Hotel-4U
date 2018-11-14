@@ -80,7 +80,7 @@
 				<div class="owl-item">
           <div class="home_slider_background" style="background-image:url(../../public/images/hotel.jpg)"></div>
 					<div class="home_slider_content text-center">
-						<div class="home_slider_content_inne" >
+						<div class="home_slider_content" >
 
 					<!-- Contact Form -->
 
@@ -121,7 +121,7 @@
 					<div class="footer_col">
 						<div class="footer_content footer_about">
 							<div class="logo_container footer_logo">
-								<div class="logo"><a href="#"><img src="public/images/logo.png" alt="">4u</a></div>
+								<div class="logo"><a href="#"><img src="../../public/images/logo.png" alt="">4u</a></div>
 							</div>
 							<p class="footer_about_text">Junte-se a nós</p>
 							<ul class="footer_social_list">

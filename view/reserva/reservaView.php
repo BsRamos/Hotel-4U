@@ -52,75 +52,31 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- Main Navigation -->
-
-		<nav class="main_nav">
-			<div class="container">
-				<div class="row">
-					<div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
-						<div class="logo_container">
-							<div class="logo"><a href="#"><img src="../../public/images/logo.png" alt="">4u</a></div>
-						</div>
-						</div>
-
-						<form id="search_form" class="search_form bez_1">
-							<input type="search" class="search_content_input bez_1">
-						</form>
-
-						<div class="hamburger">
-							<i class="fa fa-bars trans_200"></i>
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav>
-
 	</header>
 
-	<div class="menu trans_500">
-		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
-			<div class="menu_close_container"><div class="menu_close"></div></div>
-			<div class="logo menu_logo"><a href="#"><img src="../../public/images/logo.png" alt=""></a></div>
-			<ul>
-				<li class="menu_item"><a href="../../index.php">home</a></li>
-				<li class="menu_item"><a href="#">Sobre Nós</a></li>
-				<li class="menu_item"><a href="./contact.php">contato</a></li>
-			</ul>
-		</div>
-	</div>
 
-	<!-- Home -->
-
-	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="../../public/images/blog_1.jpg"></div>
-		<div class="home_content">
-			<div class="home_title" style="color: #2F0B3A"  > Reserva </div>
-
-			<?php foreach( $lista2 as $linha ): ?>
-			 <h1 style="color: #2F0B3A"><center><span style="font-weight:bold"> <?= $linha['nome'] ?> </span> </h1>
-			<?php endforeach ?>
-		</div>
-	</div>
-<br>
-<br>
-
-
-<div class="contact_form_section">
-	<div class="container">
-		<div class="row">
-			<div class="col">
 
 				<!-- Contact Form -->
 				<div class="contact_form_container">
+					<div class="contact_form_container">
+				<br><br><br><br><br><
+					<div class="home_slider_content ">
+					<br>
+							<h1>Reserva </h1>
+						</div>
+					</div>
 					<div class="contact_title text-center"></div>
 					<br>
 					<br>
 					<form method="post"  action="../../router.php?op=4" class="contact_form text-center">
+						<br>
+						<br>
+						<div class="search_item">
+             </div>
 									<br>
 									<br>
 									<div class="search_item">
-										<select name="id_hotel" class="dropdown_item_select search_input">
+										<select name="id_hotel" class="dropdown_item_select search_input" required="required">
 											<option value="">Selecione o Hotel:</option>
 											<?php foreach( $lista as $e ): ?>
 											<option value="<?= $e['id'] ?>"><?= $e['local'] ?></option>
@@ -130,7 +86,7 @@
 									<br>
 									<br>
 									<div class="search_item">
-										<select name="tipoQuarto" class="dropdown_item_select search_input">
+										<select name="tipoQuarto" class="dropdown_item_select search_input" required="required">
 											<option value="">Selecione a sua Acomodação:</option>
 											<option value="1">Standart</option>
 											<option value="2">Luxo</option>
@@ -140,7 +96,7 @@
 									<br>
 									<br>
 									<div class="search_item">
-										<select name="numC" class="dropdown_item_select search_input">
+										<select name="numC" class="dropdown_item_select search_input" required="required">
 											<option value="">Selecione o numero de crianças:</option>
 											<option value="1">1</option>
 											<option value="2">2</option>
@@ -150,7 +106,7 @@
 									<br>
 									<br>
 									<div class="search_item">
-										<select name="numA" class="dropdown_item_select search_input">
+										<select name="numA" class="dropdown_item_select search_input" required="required">
 											<option value="">Selecione o número de adultos:</option>
 											<option value="1">1</option>
 											<option value="2">2</option>
@@ -160,18 +116,9 @@
 									</div>
 									<br>
 									<br>
-							<div class="form-group">
-								<input type="text" name="dataE" placeholder="Data de Entrada : YYYY-MM-DD" class="text_field contact_form_message">
-						</div>
-
-						<div class="form-group">
-							<input type="text" name="dataS" placeholder="Data de Saida : YYYY-MM-DD" class="text_field contact_form_message">
-						</div>
-
-						<div class="form-group">
-							<textarea class="text_field contact_form_message" name="extra" rows="4" placeholder="Se tiver alguma socilitação, fale para nós:"></textarea>
-						</div>
-
+								<input type="text" name="dataE" required="required" placeholder="Data de Entrada : YYYY-MM-DD" class="text_field contact_form_message">
+							<input type="text" name="dataS" required="required" placeholder="Data de Saida : YYYY-MM-DD" class="text_field contact_form_message">
+							<input class="text_field contact_form_message" required="required"  name="extra" rows="4" placeholder="Se tiver alguma socilitação, fale para nós:">
 						<button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Reservar<span></span><span></span><span></span></button>
 
 					</form>
