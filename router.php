@@ -48,3 +48,7 @@ if ($op == 7){
   $reservaController = new reservaController;
   $reservaController->listarMyReservas();
 }
+if($op == 8){
+  $reservaController = new reservaController;
+  $reservaController-> alterarReserva($_GET);
+}
