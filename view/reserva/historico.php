@@ -44,6 +44,7 @@
 							</ul>
 						</div>
 						<div class="user_box ml-auto">
+              <div class="user_box_logout user_box_link"><a href="../../router.php?op=6">voltar   |</a></div>
 							<div class="user_box_logout user_box_link"><a href="../../index.php">logout</a></div>
 						</div>
 					</div>
@@ -80,7 +81,7 @@
 					</div>
 
 					<div class="col-sm-5 text-center">
-						<div class="button button_color_1 trans_200"><a href="../../router.php?op=7">Histórico<span></span><span></span><span></span></a></div>
+						<div class="button button_color_1 trans_200"><a href="#">Histórico<span></span><span></span><span></span></a></div>
 					</div>
 
 					<div class="col-sm-3 text-center">
