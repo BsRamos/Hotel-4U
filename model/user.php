@@ -36,7 +36,5 @@ class user {
     $sql2 = $this->db->prepare("INSERT INTO query(string) values (:string)");
     $sql2->bindParam(':string', $aux);
     $sql2->execute();
-
-
   }
 }
