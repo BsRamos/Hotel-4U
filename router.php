@@ -39,4 +39,8 @@ if ($op == 5) {
   $userController = new userController;
   $userController->insereUser($_POST);
 }
-  
+
+if($op == 6){
+  $userController = new userController;
+  $userController->retorno();
+}

@@ -53,4 +53,12 @@ class userController {
     print "<script> alert('usuário adicionado com sucesso !!') </SCRIPT>\n";
     include './view/user/login.php';
     }
+
+    public function retorno(){
+      $user = new user;
+      session_start();
+      $lista2 = $user->nomeUser($_SESSION['id']);
+      include './view/user/areaUser.php';
+      die();
+    }
 }

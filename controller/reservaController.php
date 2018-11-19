@@ -4,6 +4,7 @@ namespace Controller;
 
 use Model\hoteis;
 use Model\reserva;
+use Model\user;
 
 class reservaController {
 
@@ -24,12 +25,13 @@ class reservaController {
     $extras = $request['extra'];
     $dataE = $request['dataE'];
     $dataS = $request['dataS'];
-    echo "<script>alert('Reserva feita com sucesso')</script>";
     $reserva = new reserva;
     $reserva->insereReserva($quarto,$numC,$numA,$dataE,$dataS,$extras,$hotel,$usuario);
+    echo "<script>alert('Reserva feita com sucesso')</script>";
 
+    $user = new user;
+    $lista2 = $user->nomeUser($_SESSION['id']);
     include './view/user/areaUser.php';
-
   }
 
 }

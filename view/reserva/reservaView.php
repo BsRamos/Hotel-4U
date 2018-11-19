@@ -46,6 +46,8 @@
 							</ul>
 						</div>
 						<div class="user_box ml-auto">
+
+							<div class="user_box_logout user_box_link"><a href="../../router.php?op=6">voltar   |</a></div>
 							<div class="user_box_logout user_box_link"><a href="../../index.php">logout</a></div>
 						</div>
 					</div>
@@ -118,7 +120,7 @@
 									<br>
 								<input type="text" name="dataE" required="required" placeholder="Data de Entrada : YYYY-MM-DD" class="text_field contact_form_message">
 							<input type="text" name="dataS" required="required" placeholder="Data de Saida : YYYY-MM-DD" class="text_field contact_form_message">
-							<input class="text_field contact_form_message" required="required"  name="extra" rows="4" placeholder="Se tiver alguma socilitação, fale para nós:">
+							<input class="text_field contact_form_message" name="extra" rows="4" placeholder="Se tiver alguma socilitação, fale para nós:">
 						<button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Reservar<span></span><span></span><span></span></button>
 
 					</form>

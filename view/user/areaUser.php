@@ -94,7 +94,6 @@
 		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="../../public/images/blog_1.jpg"></div>
 		<div class="home_content">
 			<div class="home_title" style="color: #2F0B3A"  >Bem Vindo(a) </div>
-
 			<?php foreach( $lista2 as $linha ): ?>
 			 <h1 style="color: #2F0B3A"><center><span style="font-weight:bold"> <?= $linha['nome'] ?> </span> </h1>
 			<?php endforeach ?>
@@ -107,19 +106,15 @@
 			<div class="banner-content col-lg-10">
 				<div class="row">
 
-					<div class="col-sm-3 text-center">
+					<div class="col-sm-4 text-center">
 						<div class="button button_color_1 trans_200"><a href="../../router.php?op=3">Fazer reserva<span></span><span></span><span></span></a></div>
 					</div>
 
 					<div class="col-sm-4 text-center">
-						<div class="button button_color_1 trans_200"><a href="#">Alterar/Cancelar reserva<span></span><span></span><span></span></a></div>
-					</div>
-
-					<div class="col-sm-3 text-center">
 						<div class="button button_color_1 trans_200"><a href="#">Histórico<span></span><span></span><span></span></a></div>
 					</div>
 
-					<div class="col-sm-2 text-center">
+					<div class="col-sm-4 text-center">
 						<div class="button button_color_1 trans_200"><a href="#">Alterar dados cadastrais<span></span><span></span><span></span></a></div>
 					</div>
 
