@@ -17,8 +17,8 @@ class reservaController {
 
   public function listarMyReservas(){
     $reserva = new reserva;
-    $lista = $reserva->listMReserv();
-    include './view/reserva/historico.php'
+    $listaM = $reserva->listMReserv();
+    include './view/reserva/historico.php';
     }
 
   public function insereReserva($request){

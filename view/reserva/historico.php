@@ -52,46 +52,46 @@
 			</div>
 		</div>
 
-		<!-- Main Navigation -->
-
-
 	</header>
 
 
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="../../public/images/blog_1.jpg"></div>
 		<div class="home_content">
-			<div class="home_title" style="color: #2F0B3A"  >Bem Vindo(a) </div>
-			<?php foreach( $lista2 as $linha ): ?>
-			 <h1 style="color: #2F0B3A"><center><span style="font-weight:bold"> <?= $linha['nome'] ?> </span> </h1>
-			<?php endforeach ?>
+			<br> <h1> Histórico de reservas<h1>
+			</div>
 		</div>
-	</div>
-<br>
-<br>
+	<table class="table table-striped">
+  <thead class=" table-danger">
+	<tr>
+	<th scope="col">Hotel</th>
+	<th>Quarto</th>
+	<th>Crianças</th>
+	<th>Adultos</th>
+	<th>Entrada</th>
+	<th>Saida</th>
+	<th>Extras</th>
+	<th>Valor</th>
+	<th> Alterar Reserva </th>
+	<th> Cancelar Reserva </th>
+</tr>
+</thead>
 
-		<section class="banner-area align-items-center">
-			<div class="banner-content col-lg-10">
-				<div class="row">
+<?php foreach ( $listaM as $l ):?>
+<tr>
+	<td><?= $l['idHotel']?></td>
+	<td><?= $l['tipoQuarto']?></td>
+	<td><?= $l['numCriancas']?></td>
+	<td><?= $l['numAdultos']?></td>
+	<td><?= $l['dataEntrada']?></td>
+	<td><?= $l['dataSaida']?></td>
+	<td><?= $l['extras']?></td>
+	<td><?= $l['valor']?></td>
+</tr>
+<?php endforeach ?>
+</table>
 
-					<div class="col-sm-4 text-center">
-						<div class="button button_color_1 trans_200"><a href="../../router.php?op=3">Fazer reserva<span></span><span></span><span></span></a></div>
-					</div>
-
-					<div class="col-sm-5 text-center">
-						<div class="button button_color_1 trans_200"><a href="#">Histórico<span></span><span></span><span></span></a></div>
-					</div>
-
-					<div class="col-sm-3 text-center">
-						<div class="button button_color_1 trans_200"><a href="#">Alterar dados cadastrais<span></span><span></span><span></span></a></div>
-					</div>
-
-
-			</div>
-			</div>
-		</section>
 
 
 	<!-- Footer -->
