@@ -28,4 +28,11 @@ class reserva {
     $sql2->execute();
   }
 
+  public function listMReserv(){
+    session_start();
+    $idd =$_SESSION['id'];
+    $sql = "SELECT * FROM reserva WHERE idUsuario = $id";
+    return $this->db->query($sql);
+  }
+
 }

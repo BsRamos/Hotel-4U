@@ -44,3 +44,7 @@ if($op == 6){
   $userController = new userController;
   $userController->retorno();
 }
+if ($op == 7){
+  $reservaController = new reservaController;
+  $reservaController->listarMyReservas();
+}

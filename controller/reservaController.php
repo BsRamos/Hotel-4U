@@ -15,6 +15,12 @@ class reservaController {
     include './view/reserva/reservaView.php';
   }
 
+  public function listarMyReservas(){
+    $reserva = new reserva;
+    $lista = $reserva->listMReserv();
+    include './view/reserva/historico.php'
+    }
+
   public function insereReserva($request){
     $quarto = $request['tipoQuarto'];
     $numC = $request['numC'];
