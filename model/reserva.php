@@ -27,11 +27,11 @@ class reserva {
     if ($quarto == 3) {
       $valor = 4800 + ($numA * 200) + ($numC * 100);
     }
-    $sql = "INSERT INTO reserva(tipoQuarto, numCriancas, numAdultos, dataEntrada, dataSaida, extras, idUsuario, idHotel)
-    values ('$quarto','$numC','$numA','$dataE','$dataS','$extras','$idUser','$idHotel')";
+    $sql = "INSERT INTO reserva(tipoQuarto, numCriancas, numAdultos, dataEntrada, dataSaida, extras, idUsuario, idHotel,valor)
+    values ('$quarto','$numC','$numA','$dataE','$dataS','$extras','$idUser','$idHotel','$valor')";
     $this->db->query($sql);
-    $aux = "insert INTO reserva(tipoQuarto, numCriancas, numAdultos, dataEntrada, dataSaida, extras, idUsuario, idHotel)
-    values ('{$quarto}','{$numC}','{$numA}','{$dataE}','{$dataS}','{$extras}','{$idUser}','{$idHotel}')";
+    $aux = "INSERT INTO reserva(tipoQuarto, numCriancas, numAdultos, dataEntrada, dataSaida, extras, idUsuario, idHotel,valor)
+    values ('{$quarto}','{$numC}','{$numA}','{$dataE}','{$dataS}','{$extras}','{$idUser}','{$idHotel}','{$valor}')";
     $sql2 = $this->db->prepare("INSERT INTO query(string) values (:string)");
     $sql2->bindParam(':string', $aux);
     $sql2->execute();

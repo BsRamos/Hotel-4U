@@ -32,7 +32,7 @@ class user {
     $sql = "INSERT INTO usuario(nome,cpf,telefone,email,datanasc,tipo,senha)
     values ('$nome','$cpf','$telefone','$email','$dataNasc','1','$senha')";
     $this->db->query($sql);
-    $aux = "insert INTO usuario(nome,cpf,telefone,email,datanasc,tipo,senha) values ('{$nome}','{$cpf}','{$telefone}','{$email}','{$dataNasc}','1','{$senha}')";
+    $aux = "INSERT INTO usuario(nome,cpf,telefone,email,datanasc,tipo,senha) values ('{$nome}','{$cpf}','{$telefone}','{$email}','{$dataNasc}','1','{$senha}')";
     $sql2 = $this->db->prepare("INSERT INTO query(string) values (:string)");
     $sql2->bindParam(':string', $aux);
     $sql2->execute();
