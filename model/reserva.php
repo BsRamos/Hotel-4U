@@ -18,6 +18,15 @@ class reserva {
   }
 
   public function insereReserva($quarto,$numC,$numA,$dataE,$dataS,$extras,$idHotel,$idUser){
+    if ($quarto == 1) {
+      $valor = 600 + ($numA * 50) + ($numC * 20);
+    }
+    if ($quarto == 2) {
+      $valor = 1500 + ($numA * 100) + ($numC * 50);
+    }
+    if ($quarto == 3) {
+      $valor = 4800 + ($numA * 200) + ($numC * 100);
+    }
     $sql = "INSERT INTO reserva(tipoQuarto, numCriancas, numAdultos, dataEntrada, dataSaida, extras, idUsuario, idHotel)
     values ('$quarto','$numC','$numA','$dataE','$dataS','$extras','$idUser','$idHotel')";
     $this->db->query($sql);

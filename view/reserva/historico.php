@@ -78,10 +78,27 @@
 </tr>
 </thead>
 
+<?php use Model\hoteis;
+$hotel = new hoteis;?>
+
 <?php foreach ( $listaM as $l ):?>
 <tr>
-	<td><?= $l['idHotel']?></td>
-	<td><?= $l['tipoQuarto']?></td>
+	<?php $lista = $hotel->all(); ?>
+<?php foreach ($lista as $li): ?>
+	<?php if ($li['id'] == $l['idHotel'] ): ?>
+		<td><?=$li['local']?></td>
+	<?php endif; ?>
+<?php endforeach; ?>
+
+	<?php if ($l['tipoQuarto'] == 1): ?>
+			<td>Standart</td>
+	<?php endif; ?>
+	<?php if ($l['tipoQuarto'] == 2): ?>
+			<td>Luxo</td>
+	<?php endif; ?>
+	<?php if ($l['tipoQuarto'] == 3): ?>
+			<td>Ultra Luxo</td>
+	<?php endif; ?>
 	<td><?= $l['numCriancas']?></td>
 	<td><?= $l['numAdultos']?></td>
 	<td><?= $l['dataEntrada']?></td>
