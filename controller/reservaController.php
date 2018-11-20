@@ -39,5 +39,12 @@ class reservaController {
     $lista2 = $user->nomeUser($_SESSION['id']);
     include './view/user/areaUser.php';
   }
+  public function removeReserva($request){
+    $reserva = new reserva;
+    $id = $request['id'];
+    $reserva->Deletar($id);
+    $listaM = $reserva->listMReserv();
+    include './view/reserva/historico.php';
+  }
 
 }

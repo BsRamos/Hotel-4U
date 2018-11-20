@@ -57,11 +57,13 @@
 
 	<!-- Home -->
 
-	<div class="home" style="background-image:url(../../public/images/offer_1.jpg)">
+	<div class="home" style="background-image:url(../../public/images/bkgA.jpg)">
 		<div class="home_content">
-			<br> <h1> Histórico de reservas<h1>
+			<div class="home_slider_background">
 			</div>
 		</div>
+	</div>
+	<br> <h1> Histórico de reservas</h1>
 	<table class="table table-striped">
   <thead class=" table-danger">
 	<tr>

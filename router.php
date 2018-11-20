@@ -52,3 +52,7 @@ if($op == 8){
   $reservaController = new reservaController;
   $reservaController-> alterarReserva($_GET);
 }
+if($op == 11){
+  $reservaController = new reservaController;
+  $reservaController-> removeReserva($_GET);
+}

@@ -48,4 +48,14 @@ class reserva {
     $sql = "UPDATE reserva(tipoQuarto, numCriancas, numAdultos, dataEntrada, dataSaida, extras, idUsuario, idHotel) SET ";
   }
 
+  public function Deletar($id){
+      $sql = "DELETE FROM reserva WHERE id = '$id'";
+      $this->db->query($sql);
+
+      $aux = "DELETE FROM reserva WHERE id = '{$id}'" ;
+      $sql2 = $this->db->prepare("INSERT INTO query(string) values (:string)");
+      $sql2->bindParam(':string', $aux);
+      $sql2->execute();
+  }
+
 }
