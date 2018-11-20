@@ -88,6 +88,7 @@
 	<td><?= $l['dataSaida']?></td>
 	<td><?= $l['extras']?></td>
 	<td><?= $l['valor']?></td>
+	<td><a href="../../router.php?op=8&id=<?= $l['id']?>"></a>
 </tr>
 <?php endforeach ?>
 </table>
