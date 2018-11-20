@@ -45,13 +45,7 @@ class reserva {
   }
 
   public function Alterar($quarto,$numC,$numA,$dataE,$dataS,$extras,$idHotel,$idUser){
-    $sql = "UPDATE reserva(tipoQuarto, numCriancas, numAdultos, dataEntrada, dataSaida, extras, idUsuario, idHotel) SET "
-
-
-    UPDATE contato
-SET nome = "Zezin Carioca",
-    fone = "6666-0987"
-WHERE codigo = 4
+    $sql = "UPDATE reserva(tipoQuarto, numCriancas, numAdultos, dataEntrada, dataSaida, extras, idUsuario, idHotel) SET ";
   }
 
 }
