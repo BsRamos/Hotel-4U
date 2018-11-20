@@ -105,7 +105,7 @@ $hotel = new hoteis;?>
 	<td><?= $l['dataSaida']?></td>
 	<td><?= $l['extras']?></td>
 	<td><?= $l['valor']?></td>
-	<td><a href="../../router.php?op=8&id=<?= $l['id']?>"></a>
+	<td><center><a href="../../router.php?op=8&id=<?= $l['id']?>"><img src="../../public/images/icon.png" alt="" height="20px" width="20px"></a></center></td>
 </tr>
 <?php endforeach ?>
 </table>
