@@ -57,7 +57,7 @@
 
 	<!-- Home -->
 
-	<div class="home">
+	<div class="home" style="background-image:url(../../public/images/offer_1.jpg)">
 		<div class="home_content">
 			<br> <h1> Histórico de reservas<h1>
 			</div>
