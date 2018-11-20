@@ -100,9 +100,10 @@
 									<div class="search_item">
 										<select name="numC" class="dropdown_item_select search_input" required="required">
 											<option value="">Selecione o numero de crianças:</option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
+											<option value="0">00</option>
+											<option value="1">01</option>
+											<option value="2">02</option>
+											<option value="3">03</option>
 										</select>
 									</div>
 									<br>
@@ -110,10 +111,10 @@
 									<div class="search_item">
 										<select name="numA" class="dropdown_item_select search_input" required="required">
 											<option value="">Selecione o número de adultos:</option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-											<option value="4">4</option>
+											<option value="1">01</option>
+											<option value="2">02</option>
+											<option value="3">03</option>
+											<option value="4">04</option>
 										</select>
 									</div>
 									<br>
