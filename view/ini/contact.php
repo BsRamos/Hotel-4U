@@ -301,7 +301,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						<div class="footer_nav">
 							<ul class="footer_nav_list">
 								<li class="footer_nav_item"><a href="../../index.php">home</a></li>
-								<li class="footer_nav_item"><a href="./about.html">Sobre nós</a></li>
+								<li class="footer_nav_item"><a href="../../view/ini/about.php">Sobre nós</a></li>
 								<li class="footer_nav_item"><a href="#">contato</a></li>
 							</ul>
 						</div>

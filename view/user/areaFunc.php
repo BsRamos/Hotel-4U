@@ -53,27 +53,6 @@
 
 		<!-- Main Navigation -->
 
-		<nav class="main_nav">
-			<div class="container">
-				<div class="row">
-					<div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
-						<div class="logo_container">
-							<div class="logo"><a href="#"><img src="../../public/images/logo.png" alt="">4u</a></div>
-						</div>
-						</div>
-
-						<form id="search_form" class="search_form bez_1">
-							<input type="search" class="search_content_input bez_1">
-						</form>
-
-						<div class="hamburger">
-							<i class="fa fa-bars trans_200"></i>
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav>
-
 	</header>
 
 	<div class="menu trans_500">
@@ -91,13 +70,13 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="../../public/images/areaFunc.jpg"></div>
-		<div class="home_content">
-			<div class="home_title" style="color: #2F0B3A"  >Bem Vindo(a)  </div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="../../public/images/imgg.jpg"></div>
+		<br><br><br><br><br>
+			 <div class="home_title" style="color: #2F0B3A"  > &nbsp;&nbsp;  Bem Vindo(a) </div>
 			<?php foreach( $lista2 as $linha ): ?>
-			 <h1 style="color: #2F0B3A"><center><span style="font-weight:bold"> <?= $linha['nome'] ?> </span> </h1>
+			 <h1 style="color: #2F0B3A"><span style="font-weight:bold">  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <?= $linha['nome'] ?> </span> </h1>
 			<?php endforeach ?>
-		</div>
+
 	</div>
 <br>
 <br>
@@ -107,7 +86,7 @@
 				<div class="row">
 
 					<div class="col-sm-8 text-center">
-						<div class="button button_color_1 trans_200"><a href="#">Buscar usuário<span></span><span></span><span></span></a></div>
+						<div class="button button_color_1 trans_200"><a href="../../router.php?op=10">Buscar usuário<span></span><span></span><span></span></a></div>
 					</div>
 
 					<div class="col-sm-2 text-center">
@@ -210,9 +189,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
 						<div class="footer_nav">
 							<ul class="footer_nav_list">
-								<li class="footer_nav_item"><a href="../../index.php">home</a></li>
-								<li class="footer_nav_item"><a href="../ini/about.php">Sobre nós</a></li>
-								<li class="footer_nav_item"><a href="../ini/contact.php">contato</a></li>
 							</ul>
 						</div>
 					</div>

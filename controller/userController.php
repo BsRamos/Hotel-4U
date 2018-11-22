@@ -38,6 +38,19 @@ class userController {
     print "<script> alert('usuário não encontrado.'); window.history.go(-1); </SCRIPT>\n";
   }
 
+  public function buscarUsuario($request){
+    $user = new user;
+    $cpf = $request['cpf'];
+    $lista = $user->buscarUser($cpf);
+    include './view/reserva/buscarUsuario.php';
+  }
+
+  public function listarUsuario(){
+    $user = new user;
+    $lista = $user->all();
+    include './view/reserva/buscarUsuario.php';
+  }
+
   public function insereUser($request){
     $nome = $request['nome'];
     $email = $request['email'];

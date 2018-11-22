@@ -229,9 +229,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
 						<div class="footer_nav">
 							<ul class="footer_nav_list">
-								<li class="footer_nav_item"><a href="../../index.php">home</a></li>
-								<li class="footer_nav_item"><a href="#">Sobre nós</a></li>
-								<li class="footer_nav_item"><a href="./contact.html">contato</a></li>
 							</ul>
 						</div>
 					</div>

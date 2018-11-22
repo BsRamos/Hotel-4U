@@ -28,6 +28,11 @@ class user {
 
   }
 
+  public function buscarUser($cpf) {
+    $sql = "SELECT nome,cpf FROM usuario WHERE cpf = '$cpf' ";
+    return $this->db->query($sql);
+  }
+
   public function registrarUser($nome,$cpf,$telefone,$email,$dataNasc,$senha){
     $sql = "INSERT INTO usuario(nome,cpf,telefone,email,datanasc,tipo,senha)
     values ('$nome','$cpf','$telefone','$email','$dataNasc','1','$senha')";
