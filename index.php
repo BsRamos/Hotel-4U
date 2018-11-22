@@ -195,22 +195,19 @@
 					<!-- Search Panel -->
 
 					<div class="search_panel active">
-						<form action="#" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+						<form name="pesquisa" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 							<div class="search_item">
 								<div>Tipo do quarto</div>
-								<input type="text" class="destination search_input" required="required">
-							</div>
-							<div class="search_item">
-								<div>check in</div>
-								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-							</div>
-							<div class="search_item">
-								<div>check out</div>
-								<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
+								<select name="tQuarto" required="required" id="adults_1" class="dropdown_item_select search_input">
+								<option value="0">Selecione a sua Acomodação:</option>
+								<option value="1">Standart</option>
+								<option value="2">Luxo</option>
+								<option value="3">Ultra Luxo</option>
+								</select>
 							</div>
 							<div class="search_item">
 								<div>adultos</div>
-								<select name="adults" id="adults_1" class="dropdown_item_select search_input">
+								<select id="adults_1" name="nAdultos" class="dropdown_item_select search_input">
 									<option>01</option>
 									<option>02</option>
 									<option>03</option>
@@ -218,20 +215,48 @@
 							</div>
 							<div class="search_item">
 								<div>crianças</div>
-								<select name="children" id="children_1" class="dropdown_item_select search_input">
+								<select id="children_1" name="numCriancas" class="dropdown_item_select search_input">
 									<option>00</option>
 									<option>01</option>
 									<option>02</option>
 									<option>03</option>
 								</select>
 							</div>
-							<button class="button search_button">Orçar<span></span><span></span><span></span></button>
+							<button class="button search_button" type="button" onclick="ValorEsperado()" >Orçar<span></span><span></span><span></span></button>
+							<div class="search_item">
+								<div>Valor</div>
+								<input type="text" readonly="true" disabled class="check_in search_input" name="Valor">
+							</div>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
+<script type="text/javascript">
+		function ValorEsperado(){
+			var tipo = parseInt(document.pesquisa.tQuarto.value);
+			if (document.pesquisa.tQuarto.value == 0) {
+				window.alert("Informe o tipo de quarto!");
+				document.pesquisa.tQuarto.value.focus();
+			}
+			var nadu = parseInt(document.pesquisa.nAdultos.value);
+			var ncri = parseInt(document.pesquisa.numCriancas.value);
+			if (tipo == 1) {
+				var valor = 600 + (nadu * 50) + (ncri * 20);
+				document.pesquisa.Valor.value = valor;
+			}
+			if (tipo == 2) {
+				var valor = 1500 + (nadu * 100) + (ncri * 50);
+				document.pesquisa.Valor.value = valor;
+			}
+			if (tipo == 3) {
+				var valor = 4800 + (nadu * 200) + (ncri * 100);
+				document.pesquisa.Valor.value = valor;
+			}
+		}
+</script>
 
 	<!-- Intro -->
 
