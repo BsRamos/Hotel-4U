@@ -76,3 +76,18 @@ if($op == 13){
   $userController->updtUser($_POST);
   $userController->retorno();
 }
+
+if($op == 14){
+  $reservaController = new reservaController;
+  $reservaController-> addReserva($_GET);
+}
+
+if($op == 15){
+  $userController = new userController;
+  $userController->retornoFunc();
+}
+
+if($op == 16){
+  $reservaController = new reservaController;
+  $reservaController->insereReservaFunc($_POST);
+}
