@@ -29,7 +29,7 @@ class user {
   }
 
   public function buscarUser($cpf) {
-    $sql = "SELECT nome,cpf,id FROM usuario WHERE cpf = '$cpf' ";
+    $sql = "SELECT nome,cpf FROM usuario WHERE cpf = '$cpf' ";
     return $this->db->query($sql);
   }
 

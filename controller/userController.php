@@ -68,7 +68,6 @@ class userController {
       die();
     }
 
-
     public function retornoFunc(){
       $user = new user;
       session_start();
@@ -76,7 +75,6 @@ class userController {
       include './view/user/areaFunc.php';
       die();
     }
-
 
     public function viewUpdtCad(){
       $user = new user;
@@ -98,5 +96,5 @@ class userController {
       $user = new user;
 
       $user->altcad($nome,$cpf,$tel,$email,$datanasc,$senha,$id);
-}
+    }
 }
