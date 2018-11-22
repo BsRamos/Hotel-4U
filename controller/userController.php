@@ -67,13 +67,11 @@ class userController {
       include './view/user/areaUser.php';
     }
 
-
     public function retornoFunc(){
       $user = new user;
       $lista2 = $user->nomeUser($_SESSION['id']);
       include './view/user/areaFunc.php';
     }
-
 
     public function viewUpdtCad(){
       $user = new user;
@@ -95,5 +93,5 @@ class userController {
       $user = new user;
 
       $user->altcad($nome,$cpf,$tel,$email,$datanasc,$senha,$id);
-}
+    }
 }
