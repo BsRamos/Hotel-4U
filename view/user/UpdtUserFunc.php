@@ -88,12 +88,12 @@
               <h1>Alterar </h1>
 <?php foreach ($lista as $l): ?>
   <form action="../../router.php?op=18" method="post" id="contact_form" class="contact_form text-center">
-                  <input type="text"  value="<?=$l['nome']?>"class="contact_form_name input_field" placeholder="Nome" required="required" data-error="Name is required." name="nome">
-                  <input type="text"  value="<?=$l['email']?>" class="contact_form_name input_field" placeholder="E-mail" required="required" data-error="Email is required." name="email">
-                  <input type="text"  value="<?=$l['datanasc']?>" class="contact_form_name input_field" placeholder="Data de Nascimento" required="required" data-error="Name is required." name="datanasc">
-                  <input type="text"  value="<?=$l['cpf']?>" class="contact_form_name input_field" placeholder="CPF" required="required" data-error="Name is required." name="cpf">
-                  <input type="text"  value="<?=$l['telefone']?>" class="contact_form_name input_field" placeholder="Telefone" required="required" data-error="Name is required." name="tel">
-                  <input type="text"  value="<?=$l['senha']?>" class="contact_form_name input_field" placeholder="Senha" required="required" data-error="Name is required." name="senha">
+                  <input type="text"  size="30" value="<?=$l['nome']?>"class=" input_field" placeholder="Nome" required="required" data-error="Name is required." name="nome">
+                  <input type="text"  size="30" value="<?=$l['email']?>" class=" input_field" placeholder="E-mail" required="required" data-error="Email is required." name="email">
+                  <input type="text"  size="30" value="<?=$l['datanasc']?>" class=" input_field" placeholder="Data de Nascimento" required="required" data-error="Name is required." name="datanasc">
+                  <input type="text"  size="30" value="<?=$l['cpf']?>" class=" input_field" placeholder="CPF" required="required" data-error="Name is required." name="cpf">
+                  <input type="text"  size="30" value="<?=$l['telefone']?>" class=" input_field" placeholder="Telefone" required="required" data-error="Name is required." name="tel">
+                  <input type="text"  size="30" value="<?=$l['senha']?>" class=" input_field" placeholder="Senha" required="required" data-error="Name is required." name="senha">
               <br>
                   <button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Enviar<span></span><span></span><span></span></button>
                 </form>
