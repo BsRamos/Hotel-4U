@@ -67,3 +67,12 @@ if($op == 11){
   $reservaController = new reservaController;
   $reservaController-> removeReserva($_GET);
 }
+if($op == 12){
+  $userController = new userController;
+  $userController->viewUpdtCad();
+}
+if($op == 13){
+  $userController = new userController;
+  $userController->updtUser($_POST);
+  $userController->retorno();
+}
