@@ -94,4 +94,29 @@ class userController {
 
       $user->altcad($nome,$cpf,$tel,$email,$datanasc,$senha,$id);
     }
+
+
+    public function updt($request){
+      $user = new user;
+      $id = $request['id'];
+      session_start();
+      $_SESSION['idU'] = $id;
+      $lista = $user->nomeUser($id);
+      include './view/user/updtUserFunc.php';
+    }
+
+    public function updtFunc($request){
+      $nome = $request['nome'];
+      $email = $request['email'];
+      $datanasc = $request['datanasc'];
+      $cpf = $request['cpf'];
+      $tel = $request['tel'];
+      $senha = $request['senha'];
+      session_start();
+      $id = $_SESSION['idU'];
+
+      $user = new user;
+
+      $user->altcad($nome,$cpf,$tel,$email,$datanasc,$senha,$id);
+    }
 }
