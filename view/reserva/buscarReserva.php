@@ -43,13 +43,14 @@
 							</ul>
 						</div>
 						<div class="user_box ml-auto">
-							<div class="user_box_home user_box_link"><a href="..\..\index.php">Home   |   </a></div>
-							<div class="user_box_register user_box_link"><a href="..\..\view\user\login.php">Login</a></div>
+							<div class="user_box_logout user_box_link"><a href="../../router.php?op=15">voltar   |</a></div>
+							<div class="user_box_logout user_box_link"><a href="../../index.php">logout</a></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
 
 	</header>
 
@@ -67,7 +68,7 @@
 
 
 	<!-- Home -->
-<br>
+
 	<div class="home">
 
 		<!-- Home Slider -->
@@ -78,28 +79,19 @@
 
 				<!-- Slider Item -->
 				<div class="owl-item">
-          <div class="home_slider_background" style="background-image:url(../../public/images/hotel.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(../../public/images/r.jpg)"></div>
+
 					<div class="home_slider_content text-center">
-						<div class="home_slider_content" >
-
-					<!-- Contact Form -->
+						<div class="home_slider_content_inne" >
 
 <br>
-              <h1>Registrar </h1>
+              <h1>Reservas </h1>
 
-							<form action="../../router.php?op=5" method="post" id="contact_form" class="contact_form text-center">
-															<input type="text"  size="30" class="input_field" placeholder="Nome" required="required" data-error="Nome é necessário" name="nome">
-															<input type="text"  size="30" class="input_field" placeholder="E-mail" required="required" data-error="Email é necessário" name="email">
-															<input type="text"  size="30" class="input_field" placeholder="Data de Nascimento" required="required" data-error="Data de nascimento é necessário" name="datanasc">
-															<input type="text"  size="30" class="input_field" placeholder="CPF" required="required" data-error="CPF é necessário" name="cpf">
-															<input type="text"  size="30" class="input_field" placeholder="Telefone" required="required" data-error="Telefone é necessário" name="tel">
-															<input type="text"  size="30" class="input_field" placeholder="Senha" required="required" data-error="Senha é necessária" name="senha">
-													<br>
-															<button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Enviar<span></span><span></span><span></span></button>
+              <form action="../../router.php?op=23" method="post" id="contact_form" class="contact_form text-center">
+  							<input type="text"  class="contact_form_name input_field" placeholder="Data" required="required" data-error="Data é necessária" name="dataE">
 <br>
-<br>
-                            </form>
-
+    <button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Pesquisar<span></span><span></span><span></span></button>
+  </form>
 
 						</div>
 					</div>
@@ -109,6 +101,53 @@
 		</div>
 
 	</div>
+<br>
+
+<table class="table table-striped table-hover table-dark">
+<thead class=" thead-dark">
+<tr>
+<th>Hotel</th>
+<th>Quarto</th>
+<th>Crianças</th>
+<th>Adultos</th>
+<th>Entrada</th>
+<th>Saida</th>
+<th>Extras</th>
+<th>Valor</th>
+</tr>
+</thead>
+
+<?php use Model\hoteis;
+$hotel = new hoteis;?>
+
+<?php foreach ( $listaM as $l ):?>
+<tr>
+<?php $lista = $hotel->all(); ?>
+<?php foreach ($lista as $li): ?>
+<?php if ($li['id'] == $l['idHotel'] ): ?>
+<td><?=$li['local']?></td>
+<?php endif; ?>
+<?php endforeach; ?>
+
+<?php if ($l['tipoQuarto'] == 1): ?>
+  <td >Standart</td>
+<?php endif; ?>
+<?php if ($l['tipoQuarto'] == 2): ?>
+  <td>Luxo</td>
+<?php endif; ?>
+<?php if ($l['tipoQuarto'] == 3): ?>
+  <td>Ultra Luxo</td>
+<?php endif; ?>
+<td><?= $l['numCriancas']?></td>
+<td><?= $l['numAdultos']?></td>
+<td><?= $l['dataEntrada']?></td>
+<td><?= $l['dataSaida']?></td>
+<td><?= $l['extras']?></td>
+<td><?= $l['valor']?></td>
+<?php endforeach ?>
+</table>
+
+
 
 	<!-- Footer -->
 
@@ -201,9 +240,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
 						<div class="footer_nav">
 							<ul class="footer_nav_list">
-								<li class="footer_nav_item"><a href="../../index.php">home</a></li>
-								<li class="footer_nav_item"><a href="/view/ini/about.php">Sobre nós</a></li>
-								<li class="footer_nav_item"><a href="/view/ini/contact.php">contato</a></li>
 							</ul>
 						</div>
 					</div>

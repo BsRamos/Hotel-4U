@@ -285,7 +285,6 @@
 						<div class="intro_item_background" style="background-image:url(public/images/op1.jpg)"></div>
 						<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
 							<div class="intro_date">Opção 1</div>
-							<div class="button intro_button"><div class="button_bcg"></div><a href="#">Veja Mais<span></span><span></span><span></span></a></div>
 							<div class="intro_center text-center">
 								<h1>Standart</h1>
 								<div class="intro_price">Por R$600,00 a diaria*</div>
@@ -310,7 +309,6 @@
 						<div class="intro_item_background" style="background-image:url(public/images/op2.jpg)"></div>
 						<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
 							<div class="intro_date">Opção 2</div>
-							<div class="button intro_button"><div class="button_bcg"></div><a href="#">Veja Mais<span></span><span></span><span></span></a></div>
 							<div class="intro_center text-center">
 								<h1>Luxo</h1>
 								<div class="intro_price">Por R$1500,00 a diaria*</div>
@@ -335,7 +333,6 @@
 						<div class="intro_item_background" style="background-image:url(public/images/op3.jpg)"></div>
 						<div class="intro_item_content d-flex flex-column align-items-center justify-content-center">
 							<div class="intro_date">Opção 3</div>
-							<div class="button intro_button"><div class="button_bcg"></div><a href="#">Veja Mais<span></span><span></span><span></span></a></div>
 							<div class="intro_center text-center">
 								<h1>Ultra Luxo</h1>
 								<div class="intro_price">Por R$4800,00 a diaria*</div>

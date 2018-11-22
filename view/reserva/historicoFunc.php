@@ -43,7 +43,7 @@
 							</ul>
 						</div>
 						<div class="user_box ml-auto">
-							<div class="user_box_logout user_box_link"><a href="../../router.php?op=15">voltar   |</a></div>
+							<div class="user_box_logout user_box_link"><a href="../../router.php?op=10">voltar   |</a></div>
 							<div class="user_box_logout user_box_link"><a href="../../index.php">logout</a></div>
 						</div>
 					</div>
@@ -139,8 +139,8 @@ $hotel = new hoteis;?>
 <td><?= $l['dataSaida']?></td>
 <td><?= $l['extras']?></td>
 <td><?= $l['valor']?></td>
-<td><center><a href="../../router.php?op=8&id=<?= $l['id']?>"><img src="../../public/images/icon.png" alt="" height="20px" width="20px"></a></center></td>
-<td><center><a href="../../router.php?op=11&id=<?= $l['id']?>"><img src="../../public/images/iconeExclu.png" alt="" height="20px" width="20px"></a></center></td>
+<td><center><a href="../../router.php?op=20&id=<?= $l['id']?>"><img src="../../public/images/icon.png" alt="" height="20px" width="20px"></a></center></td>
+<td><center><a href="../../router.php?op=21&id=<?= $l['id']?>"><img src="../../public/images/iconeExclu.png" alt="" height="20px" width="20px"></a></center></td>
 </tr>
 <?php endforeach ?>
 </table>
