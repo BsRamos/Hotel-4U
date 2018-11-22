@@ -6,13 +6,6 @@ use Model\user;
 
 class userController {
 
-    public function listarTodos(){
-    $user = new user;
-    $lista = $user->all();
-
-    include './view/ini/todosUsuarios.php';
-  }
-
   public function acesso($request){
     $user = new user;
     $email = $request['email'];

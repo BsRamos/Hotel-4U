@@ -47,4 +47,31 @@ class reservaController {
     include './view/reserva/historico.php';
   }
 
+  public function addReserva($request){
+    $id = $request['id'];
+    session_start();
+    $_SESSION['idC'] = $id;
+    $hotel = new hoteis;
+    $lista = $hotel->all();
+    include './view/reserva/reservaViewFunc.php';
+  }
+
+  public function insereReservaFunc($request){
+    $quarto = $request['tipoQuarto'];
+    $numC = $request['numC'];
+    $numA = $request['numA'];
+    $hotel = $request['id_hotel'];
+    session_start();
+    $usuario =$_SESSION['idC'];
+    $extras = $request['extra'];
+    $dataE = $request['dataE'];
+    $dataS = $request['dataS'];
+    $reserva = new reserva;
+    $reserva->insereReserva($quarto,$numC,$numA,$dataE,$dataS,$extras,$hotel,$usuario);
+    echo "<script>alert('Reserva feita com sucesso')</script>";
+
+    $user = new user;
+    $lista2 = $user->nomeUser($_SESSION['id']);
+    include './view/user/areaFunc.php';
+  }
 }
