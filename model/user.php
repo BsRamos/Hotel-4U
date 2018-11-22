@@ -23,7 +23,7 @@ class user {
   }
 
   public function nomeUser($id) {
-    $sql = "SELECT nome FROM usuario WHERE id = $id ";
+    $sql = "SELECT * FROM usuario WHERE id = $id ";
     return $this->db->query($sql);
 
   }
@@ -41,5 +41,19 @@ class user {
     $sql2 = $this->db->prepare("INSERT INTO query(string) values (:string)");
     $sql2->bindParam(':string', $aux);
     $sql2->execute();
+  }
+
+  public function altcad($nome,$cpf,$telefone,$email,$dataNasc,$senha,$id){
+    $sql = "UPDATE usuario
+    SET nome = '$nome', cpf = '$cpf' ,telefone = '$telefone',email = '$email',datanasc='$dataNasc',tipo = '1',senha = '$senha'
+    WHERE id = '$id'";
+    $this->db->query($sql);
+    $aux = "UPDATE usuario
+    SET nome = '{$nome}', cpf = '{$cpf}' ,telefone = '{$telefone}',email = '{$email}',datanasc='{$dataNasc}',tipo = '1',senha = '{$senha}'
+    WHERE id = '{$id}'";
+    $sql2 = $this->db->prepare("INSERT INTO query(string) values (:string)");
+    $sql2->bindParam(':string', $aux);
+    $sql2->execute();
+
   }
 }

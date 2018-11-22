@@ -74,4 +74,26 @@ class userController {
       include './view/user/areaUser.php';
       die();
     }
+
+    public function viewUpdtCad(){
+      $user = new user;
+      session_start();
+      $lista = $user->nomeUser($_SESSION['id']);
+      include './view/user/updtUser.php';
+    }
+
+    public function updtUser($request){
+      $nome = $request['nome'];
+      $email = $request['email'];
+      $datanasc = $request['datanasc'];
+      $cpf = $request['cpf'];
+      $tel = $request['tel'];
+      $senha = $request['senha'];
+      session_start();
+      $id = $_SESSION['id'];
+
+      $user = new user;
+
+      $user->altcad($nome,$cpf,$tel,$email,$datanasc,$senha,$id);
+}
 }
