@@ -43,14 +43,13 @@
 							</ul>
 						</div>
 						<div class="user_box ml-auto">
-							<div class="user_box_logout user_box_link"><a href="../../router.php?op=15">voltar   |</a></div>
-							<div class="user_box_logout user_box_link"><a href="../../index.php">logout</a></div>
+              <div class="user_box_logout user_box_link"><a href="../../router.php?op=15">voltar   |</a></div>
+              <div class="user_box_logout user_box_link"><a href="../../index.php">logout</a></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
 
 	</header>
 
@@ -68,7 +67,7 @@
 
 
 	<!-- Home -->
-
+<br>
 	<div class="home">
 
 		<!-- Home Slider -->
@@ -79,19 +78,27 @@
 
 				<!-- Slider Item -->
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(../../public/images/usu.jpg)"></div>
-
+          <div class="home_slider_background" style="background-image:url(../../public/images/hotel.jpg)"></div>
 					<div class="home_slider_content text-center">
-						<div class="home_slider_content_inne" >
+						<div class="home_slider_content" >
+
+					<!-- Contact Form -->
 
 <br>
-              <h1>Usuários </h1>
-
-              <form action="../../router.php?op=9" method="post" id="contact_form" class="contact_form text-center">
-  							<input type="text"  class="contact_form_name input_field" placeholder="CPF" required="required" data-error="CPF é necessário" name="cpf">
+              <h1>Alterar </h1>
+<?php foreach ($lista as $l): ?>
+  <form action="../../router.php?op=18" method="post" id="contact_form" class="contact_form text-center">
+                  <input type="text"  value="<?=$l['nome']?>"class="contact_form_name input_field" placeholder="Nome" required="required" data-error="Name is required." name="nome">
+                  <input type="text"  value="<?=$l['email']?>" class="contact_form_name input_field" placeholder="E-mail" required="required" data-error="Email is required." name="email">
+                  <input type="text"  value="<?=$l['datanasc']?>" class="contact_form_name input_field" placeholder="Data de Nascimento" required="required" data-error="Name is required." name="datanasc">
+                  <input type="text"  value="<?=$l['cpf']?>" class="contact_form_name input_field" placeholder="CPF" required="required" data-error="Name is required." name="cpf">
+                  <input type="text"  value="<?=$l['telefone']?>" class="contact_form_name input_field" placeholder="Telefone" required="required" data-error="Name is required." name="tel">
+                  <input type="text"  value="<?=$l['senha']?>" class="contact_form_name input_field" placeholder="Senha" required="required" data-error="Name is required." name="senha">
+              <br>
+                  <button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Enviar<span></span><span></span><span></span></button>
+                </form>
+<?php endforeach; ?>
 <br>
-    <button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Pesquisar<span></span><span></span><span></span></button>
-  </form>
 
 						</div>
 					</div>
@@ -101,30 +108,6 @@
 		</div>
 
 	</div>
-<br>
-
-<table class="table table-striped table-hover table-dark">
-<thead class=" thead-dark">
-<tr>
-<th>CPF</th>
-<th>Nome</th>
-<th><center>Fazer Reserva</center></th>
-<th><center>Alterar dados cadastrais</center></th>
-<th><center>Histórico</center></th>
-</tr>
-</thead>
-
-<?php foreach ( $lista as $l ):?>
-<tr>
-<td><?=$l['cpf']?></td>
-<td><?= $l['nome']?></td>
-<td><center><a href="../../router.php?op=14&id=<?=$l['id']?>"><img src="../../public/images/add.png" alt="" height="20px" width="20px"></a></center></td>
-<td><center><a href="../../router.php?op=17&id=<?=$l['id']?>"><img src="../../public/images/icon.png" alt="" height="20px" width="20px"></a></center></td>
-<td><center><a href="../../router.php?op=19&id=<?=$l['id']?>"><img src="../../public/images/lista.png" alt="" height="20px" width="20px"></a></center></td>
-</tr>
-<?php endforeach ?>
-</table>
-
 
 	<!-- Footer -->
 
@@ -217,6 +200,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
 						<div class="footer_nav">
 							<ul class="footer_nav_list">
+								<li class="footer_nav_item"><a href="../../index.php">home</a></li>
+								<li class="footer_nav_item"><a href="/view/ini/about.php">Sobre nós</a></li>
+								<li class="footer_nav_item"><a href="/view/ini/contact.php">contato</a></li>
 							</ul>
 						</div>
 					</div>

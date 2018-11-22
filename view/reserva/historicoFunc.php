@@ -79,19 +79,13 @@
 
 				<!-- Slider Item -->
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(../../public/images/usu.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(../../public/images/imagB.jpg)"></div>
 
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inne" >
 
 <br>
-              <h1>Usuários </h1>
-
-              <form action="../../router.php?op=9" method="post" id="contact_form" class="contact_form text-center">
-  							<input type="text"  class="contact_form_name input_field" placeholder="CPF" required="required" data-error="CPF é necessário" name="cpf">
-<br>
-    <button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Pesquisar<span></span><span></span><span></span></button>
-  </form>
+              <h1>Histórico de Reservas </h1>
 
 						</div>
 					</div>
@@ -102,25 +96,51 @@
 
 	</div>
 <br>
-
-<table class="table table-striped table-hover table-dark">
+	<table class="table table-striped table-hover table-dark">
 <thead class=" thead-dark">
 <tr>
-<th>CPF</th>
-<th>Nome</th>
-<th><center>Fazer Reserva</center></th>
-<th><center>Alterar dados cadastrais</center></th>
-<th><center>Histórico</center></th>
+<th>Hotel</th>
+<th>Quarto</th>
+<th>Crianças</th>
+<th>Adultos</th>
+<th>Entrada</th>
+<th>Saida</th>
+<th>Extras</th>
+<th>Valor</th>
+<th> Alterar Reserva </th>
+<th> Cancelar Reserva </th>
 </tr>
 </thead>
 
-<?php foreach ( $lista as $l ):?>
+<?php use Model\hoteis;
+$hotel = new hoteis;?>
+
+<?php foreach ( $listaM as $l ):?>
 <tr>
-<td><?=$l['cpf']?></td>
-<td><?= $l['nome']?></td>
-<td><center><a href="../../router.php?op=14&id=<?=$l['id']?>"><img src="../../public/images/add.png" alt="" height="20px" width="20px"></a></center></td>
-<td><center><a href="../../router.php?op=17&id=<?=$l['id']?>"><img src="../../public/images/icon.png" alt="" height="20px" width="20px"></a></center></td>
-<td><center><a href="../../router.php?op=19&id=<?=$l['id']?>"><img src="../../public/images/lista.png" alt="" height="20px" width="20px"></a></center></td>
+<?php $lista = $hotel->all(); ?>
+<?php foreach ($lista as $li): ?>
+<?php if ($li['id'] == $l['idHotel'] ): ?>
+	<td><?=$li['local']?></td>
+<?php endif; ?>
+<?php endforeach; ?>
+
+<?php if ($l['tipoQuarto'] == 1): ?>
+		<td >Standart</td>
+<?php endif; ?>
+<?php if ($l['tipoQuarto'] == 2): ?>
+		<td>Luxo</td>
+<?php endif; ?>
+<?php if ($l['tipoQuarto'] == 3): ?>
+		<td>Ultra Luxo</td>
+<?php endif; ?>
+<td><?= $l['numCriancas']?></td>
+<td><?= $l['numAdultos']?></td>
+<td><?= $l['dataEntrada']?></td>
+<td><?= $l['dataSaida']?></td>
+<td><?= $l['extras']?></td>
+<td><?= $l['valor']?></td>
+<td><center><a href="../../router.php?op=8&id=<?= $l['id']?>"><img src="../../public/images/icon.png" alt="" height="20px" width="20px"></a></center></td>
+<td><center><a href="../../router.php?op=11&id=<?= $l['id']?>"><img src="../../public/images/iconeExclu.png" alt="" height="20px" width="20px"></a></center></td>
 </tr>
 <?php endforeach ?>
 </table>

@@ -48,6 +48,7 @@ if ($op == 7){
   $reservaController = new reservaController;
   $reservaController->listarMyReservas();
 }
+
 if($op == 8){
   $reservaController = new reservaController;
   $reservaController-> alterarReserva($_GET);
@@ -84,10 +85,27 @@ if($op == 14){
 
 if($op == 15){
   $userController = new userController;
+  session_start();
   $userController->retornoFunc();
 }
 
 if($op == 16){
   $reservaController = new reservaController;
   $reservaController->insereReservaFunc($_POST);
+}
+
+if($op == 17){
+  $userController = new userController;
+  $userController->updt($_GET);
+}
+
+if($op == 18){
+  $userController = new userController;
+  $userController->updtFunc($_POST);
+  $userController->retornoFunc();
+}
+
+if($op == 19){
+  $reservaController = new reservaController;
+  $reservaController->lista($_GET);
 }

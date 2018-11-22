@@ -65,16 +65,13 @@ class userController {
       session_start();
       $lista2 = $user->nomeUser($_SESSION['id']);
       include './view/user/areaUser.php';
-      die();
     }
 
 
     public function retornoFunc(){
       $user = new user;
-      session_start();
       $lista2 = $user->nomeUser($_SESSION['id']);
       include './view/user/areaFunc.php';
-      die();
     }
 
 

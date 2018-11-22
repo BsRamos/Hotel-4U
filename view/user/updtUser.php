@@ -43,8 +43,8 @@
 							</ul>
 						</div>
 						<div class="user_box ml-auto">
-							<div class="user_box_home user_box_link"><a href="..\..\index.php">Home   |   </a></div>
-							<div class="user_box_register user_box_link"><a href="..\..\view\user\login.php">Login</a></div>
+							<div class="user_box_logout user_box_link"><a href="../../router.php?op=6">voltar   |</a></div>
+							<div class="user_box_logout user_box_link"><a href="../../index.php">logout</a></div>
 						</div>
 					</div>
 				</div>
@@ -85,16 +85,18 @@
 					<!-- Contact Form -->
 
 <br>
-              <h1>Alterar Cadastro </h1>
+       <h1>Alterar </h1>
+			 <br>
+			 <h2> Cadastro </h2>
 
 <?php foreach ($lista as $l): ?>
   <form action="../../router.php?op=13" method="post" id="contact_form" class="contact_form text-center">
-                  <input type="text"  value=" <?=$l['nome']?> "class="contact_form_name input_field" placeholder="Nome" required="required" data-error="Name is required." name="nome">
-                  <input type="text"  value=" <?=$l['email']?>" class="contact_form_name input_field" placeholder="E-mail" required="required" data-error="Email is required." name="email">
-                  <input type="text"  value=" <?=$l['datanasc']?>" class="contact_form_name input_field" placeholder="Data de Nascimento" required="required" data-error="Name is required." name="datanasc">
-                  <input type="text"  value=" <?=$l['cpf']?>" class="contact_form_name input_field" placeholder="CPF" required="required" data-error="Name is required." name="cpf">
-                  <input type="text"  value=" <?=$l['telefone']?>" class="contact_form_name input_field" placeholder="Telefone" required="required" data-error="Name is required." name="tel">
-                  <input type="text"  value=" <?=$l['senha']?>" class="contact_form_name input_field" placeholder="Senha" required="required" data-error="Name is required." name="senha">
+                  <input type="text" size="30" value="<?=$l['nome']?>"class=" input_field" placeholder="Nome" required="required" data-error="Name is required." name="nome">
+                  <input type="text" size="30" value="<?=$l['email']?>" class="input_field" placeholder="E-mail" required="required" data-error="Email is required." name="email">
+                  <input type="text"  size="30" value="<?=$l['datanasc']?>" class=" input_field" placeholder="Data de Nascimento" required="required" data-error="Name is required." name="datanasc">
+                  <input type="text"  size="30" value="<?=$l['cpf']?>" class=" input_field" placeholder="CPF" required="required" data-error="Name is required." name="cpf">
+                  <input type="text"  size="30" value="<?=$l['telefone']?>" class=" input_field" placeholder="Telefone" required="required" data-error="Name is required." name="tel">
+                  <input type="text"  size="30" value="<?=$l['senha']?>" class=" input_field" placeholder="Senha" required="required" data-error="Name is required." name="senha">
               <br>
                   <button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Enviar<span></span><span></span><span></span></button>
                 </form>
@@ -201,9 +203,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
 						<div class="footer_nav">
 							<ul class="footer_nav_list">
-								<li class="footer_nav_item"><a href="../../index.php">home</a></li>
-								<li class="footer_nav_item"><a href="/view/ini/about.php">Sobre nós</a></li>
-								<li class="footer_nav_item"><a href="/view/ini/contact.php">contato</a></li>
+
 							</ul>
 						</div>
 					</div>

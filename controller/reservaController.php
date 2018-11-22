@@ -74,4 +74,10 @@ class reservaController {
     $lista2 = $user->nomeUser($_SESSION['id']);
     include './view/user/areaFunc.php';
   }
+
+  public function lista($request){
+    $reserva = new reserva;
+    $listaM = $reserva->listMReserv();
+    include './view/reserva/historicoFunc.php';
+  }
 }

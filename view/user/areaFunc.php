@@ -90,7 +90,7 @@
 					</div>
 
 					<div class="col-sm-2 text-center">
-						<div class="button button_color_1 trans_200"><a href="#">Listar reservas do dia<span></span><span></span><span></span></a></div>
+						<div class="button button_color_1 trans_200"><a href="#">Listar reservas<span></span><span></span><span></span></a></div>
 					</div>
 
 			</div>

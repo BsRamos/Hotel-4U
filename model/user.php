@@ -13,7 +13,7 @@ class user {
   }
 
   public function all() {
-    $sql = "SELECT * FROM usuario";
+    $sql = "SELECT * FROM usuario WHERE tipo = '1'";
     return $this->db->query($sql);
   }
 
@@ -45,11 +45,11 @@ class user {
 
   public function altcad($nome,$cpf,$telefone,$email,$dataNasc,$senha,$id){
     $sql = "UPDATE usuario
-    SET nome = '$nome', cpf = '$cpf' ,telefone = '$telefone',email = '$email',datanasc='$dataNasc',tipo = '1',senha = '$senha'
+    SET nome = '$nome', cpf = '$cpf' ,telefone = '$telefone',email ='$email',datanasc='$dataNasc',tipo = '1',senha = '$senha'
     WHERE id = '$id'";
     $this->db->query($sql);
     $aux = "UPDATE usuario
-    SET nome = '{$nome}', cpf = '{$cpf}' ,telefone = '{$telefone}',email = '{$email}',datanasc='{$dataNasc}',tipo = '1',senha = '{$senha}'
+    SET nome = '{$nome}', cpf = '{$cpf}' ,telefone = '{$telefone}',email ='{$email}',datanasc='{$dataNasc}',tipo = '1',senha = '{$senha}'
     WHERE id = '{$id}'";
     $sql2 = $this->db->prepare("INSERT INTO query(string) values (:string)");
     $sql2->bindParam(':string', $aux);
