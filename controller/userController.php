@@ -28,7 +28,7 @@ class userController {
       die();
       }
     }
-    print "<script> alert('usuário não encontrado.'); window.history.go(-1); </SCRIPT>\n";
+    print "<script> alert('Usuário não encontrado.'); window.history.go(-1); </SCRIPT>\n";
   }
 
   public function buscarUsuario($request){
@@ -56,7 +56,7 @@ class userController {
 
     $user->registrarUser($nome,$cpf,$tel,$email,$datanasc,$senha);
 
-    print "<script> alert('usuário adicionado com sucesso !!') </SCRIPT>\n";
+    print "<script> alert('Registrado com sucesso.') </SCRIPT>\n";
     include './view/user/login.php';
     }
 

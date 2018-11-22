@@ -88,12 +88,12 @@
               <h1>Registrar </h1>
 
 							<form action="../../router.php?op=5" method="post" id="contact_form" class="contact_form text-center">
-															<input type="text"  size="30" class="input_field" placeholder="Nome" required="required" data-error="Name is required." name="nome">
-															<input type="text"  size="30" class="input_field" placeholder="E-mail" required="required" data-error="Email is required." name="email">
-															<input type="text"  size="30" class="input_field" placeholder="Data de Nascimento" required="required" data-error="Name is required." name="datanasc">
-															<input type="text"  size="30" class="input_field" placeholder="CPF" required="required" data-error="Name is required." name="cpf">
-															<input type="text"  size="30" class="input_field" placeholder="Telefone" required="required" data-error="Name is required." name="tel">
-															<input type="text"  size="30" class="input_field" placeholder="Senha" required="required" data-error="Name is required." name="senha">
+															<input type="text"  size="30" class="input_field" placeholder="Nome" required="required" data-error="Nome é necessário" name="nome">
+															<input type="text"  size="30" class="input_field" placeholder="E-mail" required="required" data-error="Email é necessário" name="email">
+															<input type="text"  size="30" class="input_field" placeholder="Data de Nascimento" required="required" data-error="Data de nascimento é necessário" name="datanasc">
+															<input type="text"  size="30" class="input_field" placeholder="CPF" required="required" data-error="CPF é necessário" name="cpf">
+															<input type="text"  size="30" class="input_field" placeholder="Telefone" required="required" data-error="Telefone é necessário" name="tel">
+															<input type="text"  size="30" class="input_field" placeholder="Senha" required="required" data-error="Senha é necessária" name="senha">
 													<br>
 															<button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Enviar<span></span><span></span><span></span></button>
 <br>
