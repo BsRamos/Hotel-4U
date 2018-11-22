@@ -58,4 +58,19 @@ class reserva {
       $sql2->execute();
   }
 
+  public function listMReservas($id){
+    $sql = "SELECT * FROM reserva WHERE idUsuario = '$id'";
+    return $this->db->query($sql);
+  }
+
+  public function allR(){
+    $sql = "SELECT * FROM reserva";
+    return $this->db->query($sql);
+  }
+
+  public function allData($dataE){
+    $sql = "SELECT * FROM reserva WHERE dataEntrada = '$dataE'";
+    return $this->db->query($sql);
+  }
+
 }

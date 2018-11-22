@@ -43,7 +43,7 @@
 							</ul>
 						</div>
 						<div class="user_box ml-auto">
-							<div class="user_box_logout user_box_link"><a href="../../router.php?op=10">voltar   |</a></div>
+							<div class="user_box_logout user_box_link"><a href="../../router.php?op=15">voltar   |</a></div>
 							<div class="user_box_logout user_box_link"><a href="../../index.php">logout</a></div>
 						</div>
 					</div>
@@ -79,13 +79,19 @@
 
 				<!-- Slider Item -->
 				<div class="owl-item">
-					<div class="home_slider_background" style="background-image:url(../../public/images/imagB.jpg)"></div>
+					<div class="home_slider_background" style="background-image:url(../../public/images/r.jpg)"></div>
 
 					<div class="home_slider_content text-center">
 						<div class="home_slider_content_inne" >
 
 <br>
-              <h1>Histórico de Reservas </h1>
+              <h1>Reservas </h1>
+
+              <form action="../../router.php?op=23" method="post" id="contact_form" class="contact_form text-center">
+  							<input type="text"  class="contact_form_name input_field" placeholder="Data" required="required" data-error="Data é necessária" name="dataE">
+<br>
+    <button type="submit" id="form_submit_button" class="form_submit_button button trans_200">Pesquisar<span></span><span></span><span></span></button>
+  </form>
 
 						</div>
 					</div>
@@ -96,7 +102,8 @@
 
 	</div>
 <br>
-	<table class="table table-striped table-hover table-dark">
+
+<table class="table table-striped table-hover table-dark">
 <thead class=" thead-dark">
 <tr>
 <th>Hotel</th>
@@ -107,8 +114,6 @@
 <th>Saida</th>
 <th>Extras</th>
 <th>Valor</th>
-<th> Alterar Reserva </th>
-<th> Cancelar Reserva </th>
 </tr>
 </thead>
 
@@ -120,18 +125,18 @@ $hotel = new hoteis;?>
 <?php $lista = $hotel->all(); ?>
 <?php foreach ($lista as $li): ?>
 <?php if ($li['id'] == $l['idHotel'] ): ?>
-	<td><?=$li['local']?></td>
+<td><?=$li['local']?></td>
 <?php endif; ?>
 <?php endforeach; ?>
 
 <?php if ($l['tipoQuarto'] == 1): ?>
-		<td >Standart</td>
+  <td >Standart</td>
 <?php endif; ?>
 <?php if ($l['tipoQuarto'] == 2): ?>
-		<td>Luxo</td>
+  <td>Luxo</td>
 <?php endif; ?>
 <?php if ($l['tipoQuarto'] == 3): ?>
-		<td>Ultra Luxo</td>
+  <td>Ultra Luxo</td>
 <?php endif; ?>
 <td><?= $l['numCriancas']?></td>
 <td><?= $l['numAdultos']?></td>
@@ -139,11 +144,9 @@ $hotel = new hoteis;?>
 <td><?= $l['dataSaida']?></td>
 <td><?= $l['extras']?></td>
 <td><?= $l['valor']?></td>
-<td><center><a href="../../router.php?op=20&id=<?= $l['id']?>"><img src="../../public/images/icon.png" alt="" height="20px" width="20px"></a></center></td>
-<td><center><a href="../../router.php?op=21&id=<?= $l['id']?>"><img src="../../public/images/iconeExclu.png" alt="" height="20px" width="20px"></a></center></td>
-</tr>
 <?php endforeach ?>
 </table>
+
 
 
 	<!-- Footer -->

@@ -47,6 +47,15 @@ class reservaController {
     include './view/reserva/historico.php';
   }
 
+  public function removeReservaFunc($request){
+    $reserva = new reserva;
+    $id = $request['id'];
+    $reserva->Deletar($id);
+    $listaM = $reserva->listMReservas($id);
+    include './view/reserva/historicoFunc.php';
+  }
+
+
   public function addReserva($request){
     $id = $request['id'];
     session_start();
@@ -76,8 +85,22 @@ class reservaController {
   }
 
   public function lista($request){
+    $id = $request['id'];
     $reserva = new reserva;
-    $listaM = $reserva->listMReserv();
+    $listaM = $reserva->listMReservas($id);
     include './view/reserva/historicoFunc.php';
+  }
+
+  public function listarReserva(){
+    $reserva = new reserva;
+    $listaM = $reserva->allR();
+    include './view/reserva/buscarReserva.php';
+  }
+
+  public function listarReservaData($request){
+    $data = $request['dataE'];
+    $reserva = new reserva;
+    $listaM = $reserva->allData($data);
+    include './view/reserva/buscarReserva.php';
   }
 }

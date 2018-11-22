@@ -109,3 +109,23 @@ if($op == 19){
   $reservaController = new reservaController;
   $reservaController->lista($_GET);
 }
+
+if($op == 20){
+  $reservaController = new reservaController;
+  $reservaController-> alterarReserva($_GET);
+}
+
+if($op == 21){
+  $reservaController = new reservaController;
+  $reservaController-> removeReservaFunc($_GET);
+}
+
+if($op == 22){
+  $reservaController = new reservaController;
+  $reservaController->listarReserva();
+}
+
+if($op == 23){
+  $reservaController = new reservaController;
+  $reservaController->listarReservaData($_POST);
+}

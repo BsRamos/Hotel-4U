@@ -43,7 +43,7 @@
 							</ul>
 						</div>
 						<div class="user_box ml-auto">
-              <div class="user_box_logout user_box_link"><a href="../../router.php?op=15">voltar   |</a></div>
+              <div class="user_box_logout user_box_link"><a href="../../router.php?op=10">voltar   |</a></div>
               <div class="user_box_logout user_box_link"><a href="../../index.php">logout</a></div>
 						</div>
 					</div>
@@ -200,9 +200,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
 						<div class="footer_nav">
 							<ul class="footer_nav_list">
-								<li class="footer_nav_item"><a href="../../index.php">home</a></li>
-								<li class="footer_nav_item"><a href="/view/ini/about.php">Sobre nós</a></li>
-								<li class="footer_nav_item"><a href="/view/ini/contact.php">contato</a></li>
 							</ul>
 						</div>
 					</div>
